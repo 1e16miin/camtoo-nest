@@ -1,7 +1,7 @@
 {
-  "name": "@samchon/backend",
+  "name": "camtoo-nest",
   "version": "0.0.0",
-  "description": "Backend for ${PROJECT}",
+  "description": "Backend for camtoo-nest",
   "scripts": {
     "build": "rimraf bin && ttsc",
     "build:api": "rimraf packages/api/lib && nestia sdk && tsc -p tsconfig.api.json",
@@ -10,12 +10,12 @@
     "package:api": "npm run build:api && cd packages/api && npm publish",
     "package:models": "npm run build:models && cd packags/models && npm publish",
     "reset:dev": "git pull && npm install && npm run build && npm run stop && npm run test -- --mode=dev && npm run start:updator:master && npm run start dev",
-    "start": "pm2 start bin/executable/server.js -i 0 --name ${PROJECT}-backend-server --wait-ready --listen-timeout 120000 --kill-timeout 15000 --",
-    "start:local": "pm2 start bin/executable/server.js -i 2 --name ${PROJECT}-backend-server --wait-ready --listen-timeout 120000 --kill-timeout 15000 -- local",
+    "start": "pm2 start bin/executable/server.js -i 0 --name camtoo-nest-backend-server --wait-ready --listen-timeout 120000 --kill-timeout 15000 --",
+    "start:local": "pm2 start bin/executable/server.js -i 2 --name camtoo-nest-backend-server --wait-ready --listen-timeout 120000 --kill-timeout 15000 -- local",
     "start:updator:master": "pm2 start --name bbs-backend-updator-master bin/updator/master.js",
     "start:updator:slave": "pm2 start --name bbs-backend-updator-slave bin/updator/slave.js",
-    "start:reload": "pm2 reload ${PROJECT}-backend-server",
-    "stop": "pm2 delete ${PROJECT}-backend-server",
+    "start:reload": "pm2 reload camtoo-nest-backend-server",
+    "stop": "pm2 delete camtoo-nest-backend-server",
     "stop:updator:master": "pm2 delete bbs-backend-updator-master",
     "stop:updator:slave": "pm2 delete bbs-backend-updator-slave",
     "update": "node bin/executable/update",
@@ -25,14 +25,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/samchon/backend"
+    "url": "https://github.com/1e16miin/camtoo-nest"
   },
-  "author": "${AUTHOR}",
+  "author": "1e16miin",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/samchon/backend/issues"
+    "url": "https://github.com/1e16miin/camtoo-nest/issues"
   },
-  "homepage": "https://github.com/samchon/backend",
+  "homepage": "https://github.com/1e16miin/camtoo-nest",
   "devDependencies": {
     "@types/cli": "^0.11.19",
     "@types/express": "^4.17.12",

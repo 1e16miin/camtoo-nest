@@ -6,3 +6,8 @@ node_modules/
 package-lock.json
 .npmrc
 *.sh
+
+.vscode
+designs
+packages
+
